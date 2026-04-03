@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cashflow OS</title>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&f[]=boska@400,500,700&display=swap" rel="stylesheet">
+<style>
+:root,[data-theme=light]{--bg:#f7f6f2;--surface:#f9f8f5;--surface2:#fbfbf9;--offset:#f3f0ec;--offset2:#edeae5;--text:#28251d;--muted:#7a7974;--faint:#bab9b4;--primary:#01696f;--primary2:#0c4e54;--border:#d4d1ca;--success:#437a22;--warn:#964219;--shadow:0 18px 45px rgba(40,37,29,.08);--r1:14px;--r2:18px;--r3:26px;--space1:.25rem;--space2:.5rem;--space3:.75rem;--space4:1rem;--space5:1.25rem;--space6:1.5rem;--space8:2rem;--space10:2.5rem;--space12:3rem;--space16:4rem;--space20:5rem;--space24:6rem;--body:'Satoshi',system-ui,sans-serif;--display:'Boska',Georgia,serif}
+[data-theme=dark]{--bg:#171614;--surface:#1c1b19;--surface2:#201f1d;--offset:#1d1c1a;--offset2:#22211f;--text:#cdccca;--muted:#797876;--faint:#5a5957;--primary:#4f98a3;--primary2:#227f8b;--border:#393836;--success:#6daa45;--warn:#bb653b;--shadow:0 18px 45px rgba(0,0,0,.28)}
+*{box-sizing:border-box}
+html{color-scheme:light dark}
+body{margin:0;font-family:var(--body);background:var(--bg);color:var(--text);line-height:1.5}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:20px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--primary2));display:grid;place-items:center;color:#fff;box-shadow:var(--shadow)}
+.toggle{border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:999px;padding:10px 14px;cursor:pointer}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:22px 0 12px}
+.eyebrow{color:var(--primary);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem}
+h1{font-family:var(--display);font-size:clamp(3rem,7vw,6.4rem);line-height:.92;margin:.35rem 0 1rem;letter-spacing:-.04em}
+.lede{font-size:1.12rem;max-width:60ch;color:var(--muted)}
+.ctaRow{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{border:0;border-radius:999px;padding:14px 18px;font-weight:800;cursor:pointer}
+.primary{background:var(--primary);color:#fff}
+.secondary{background:transparent;border:1px solid var(--border);color:var(--text)}
+.card{background:var(--surface);border:1px solid rgba(40,37,29,.08);border-radius:var(--r3);box-shadow:var(--shadow)}
+.heroCard{padding:22px}
+.statGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.stat{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r2);padding:16px}
+.stat .v{font-size:2rem;font-weight:900;font-variant-numeric:tabular-nums}
+.stat .l{color:var(--muted);font-size:.92rem}
+.sections{display:grid;gap:18px;margin:18px 0 26px}
+.panel{padding:22px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.mini{padding:18px;border-radius:var(--r2);background:var(--surface2);border:1px solid var(--border)}
+.mini h3{margin:0 0 8px;font-size:1rem}
+.mini p{margin:0;color:var(--muted)}
+.pricing{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.plan{padding:20px}
+.price{font-size:2rem;font-weight:900;margin:.2rem 0}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:7px 10px;border-radius:999px;background:rgba(1,105,111,.1);color:var(--primary);font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+.safe{color:var(--success)}
+.warn{color:var(--warn)}
+.footer{padding:18px 0 40px;color:var(--muted);font-size:.95rem}
+.logoMark{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:900px){
+  .hero,.grid3,.pricing{grid-template-columns:1fr}
+  .statGrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .wrap{padding:16px}
+  .top{padding:8px 0 12px}
+  .statGrid{grid-template-columns:1fr}
+  h1{font-size:clamp(2.5rem,15vw,4.4rem)}
+  .ctaRow{flex-direction:column}
+  .btn{width:100%}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <div class="logo">
+        <svg class="logoMark" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 18V6l7 6 7-6v12"/>
+          <path d="M12 12v6"/>
+        </svg>
+      </div>
+      <div>Cashflow OS</div>
+    </div>
+    <button class="toggle" id="themeBtn">Dark Mode</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Cashflow dominance system</div>
+        <h1>Control your money. Stop leaks. Build real cashflow.</h1>
+        <p class="lede">
+          Cashflow OS shows young men exactly where money disappears, which habits kill profit,
+          and what to do next. Built for performance-minded people who want numbers, not motivation quotes.
+        </p>
+        <div class="ctaRow">
+          <button class="btn primary">Start Free Trial</button>
+          <button class="btn secondary">See Demo</button>
+        </div>
+      </div>
+
+      <div class="card heroCard">
+        <div class="badge">Weekly cashflow pulse</div>
+        <div style="height:14px"></div>
+        <div class="statGrid">
+          <div class="stat">
+            <div class="l">Free cashflow</div>
+            <div class="v safe">+€1,240</div>
+          </div>
+          <div class="stat">
+            <div class="l">Money leaks blocked</div>
+            <div class="v">12</div>
+          </div>
+          <div class="stat">
+            <div class="l">Subscriptions cut</div>
+            <div class="v warn">€86</div>
+          </div>
+          <div class="stat">
+            <div class="l">Next action</div>
+            <div class="v">Cancel 3</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sections">
+      <div class="card panel">
+        <div class="badge">Why it wins</div>
+        <div style="height:12px"></div>
+        <div class="grid3">
+          <div class="mini">
+            <h3>Hard truth visibility</h3>
+            <p>You see exactly where money goes instead of guessing.</p>
+          </div>
+          <div class="mini">
+            <h3>Action over analysis</h3>
+            <p>The system tells you what to change this week.</p>
+          </div>
+          <div class="mini">
+            <h3>Made for men 18–30</h3>
+            <p>Direct, sharp, numbers-first, no fluff branding.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card panel">
+        <div class="badge">Pricing</div>
+        <div style="height:12px"></div>
+        <div class="pricing">
+          <div class="mini plan">
+            <h3>Monthly</h3>
+            <div class="price">€29</div>
+            <p>Best for fast entry.</p>
+          </div>
+          <div class="mini plan" style="background:var(--offset)">
+            <h3>Quarterly</h3>
+            <div class="price">€69</div>
+            <p>Better retention.</p>
+          </div>
+          <div class="mini plan">
+            <h3>Yearly</h3>
+            <div class="price">€199</div>
+            <p>Best for profit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="footer">Built for speed, clarity, and aggressive profit focus.</div>
+</div>
+
+<script>
+const b = document.getElementById('themeBtn');
+const r = document.documentElement;
+let d = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+r.setAttribute('data-theme', d);
+b.textContent = d === 'dark' ? 'Light Mode' : 'Dark Mode';
+b.onclick = () => {
+  d = d === 'dark' ? 'light' : 'dark';
+  r.setAttribute('data-theme', d);
+  b.textContent = d === 'dark' ? 'Light Mode' : 'Dark Mode';
+};
+</script>
+</body>
+</html>
