@@ -5,10 +5,11 @@
 <title>Cashflow OS</title>
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&f[]=boska@400,500,700&display=swap" rel="stylesheet">
 <style>
-:root,[data-theme=light]{--bg:#f7f6f2;--surface:#f9f8f5;--surface2:#fbfbf9;--offset:#f3f0ec;--offset2:#edeae5;--text:#28251d;--muted:#7a7974;--faint:#bab9b4;--primary:#01696f;--primary2:#0c4e54;--border:#d4d1ca;--success:#437a22;--warn:#964219;--shadow:0 18px 45px rgba(40,37,29,.08);--r1:14px;--r2:18px;--r3:26px;--space1:.25rem;--space2:.5rem;--space3:.75rem;--space4:1rem;--space5:1.25rem;--space6:1.5rem;--space8:2rem;--space10:2.5rem;--space12:3rem;--space16:4rem;--space20:5rem;--space24:6rem;--body:'Satoshi',system-ui,sans-serif;--display:'Boska',Georgia,serif}
+:root,[data-theme=light]{--bg:#f7f6f2;--surface:#f9f8f5;--surface2:#fbfbf9;--offset:#f3f0ec;--offset2:#edeae5;--text:#28251d;--muted:#7a7974;--faint:#bab9b4;--primary:#01696f;--primary2:#0c4e54;--border:#d4d1ca;--success:#437a22;--warn:#964219;--shadow:0 18px 45px rgba(40,37,29,.08);--r1:14px;--r2:18px;--r3:26px;--body:'Satoshi',system-ui,sans-serif;--display:'Boska',Georgia,serif}
 [data-theme=dark]{--bg:#171614;--surface:#1c1b19;--surface2:#201f1d;--offset:#1d1c1a;--offset2:#22211f;--text:#cdccca;--muted:#797876;--faint:#5a5957;--primary:#4f98a3;--primary2:#227f8b;--border:#393836;--success:#6daa45;--warn:#bb653b;--shadow:0 18px 45px rgba(0,0,0,.28)}
-*{box-sizing:border-box} html{color-scheme:light dark} body{margin:0;font-family:var(--body);background:var(--bg);color:var(--text);line-height:1.5} a{color:inherit;text-decoration:none} button,input{font:inherit} .wrap{max-width:1180px;margin:0 auto;padding:20px} .top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0} .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase} .logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--primary2));display:grid;place-items:center;color:#fff;box-shadow:var(--shadow)} .toggle{border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:999px;padding:10px 14px;cursor:pointer} .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:22px 0 12px} .eyebrow{color:var(--primary);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem} h1{font-family:var(--display);font-size:clamp(3rem,7vw,6.4rem);line-height:.92;margin:.35rem 0 1rem;letter-spacing:-.04em} .lede{font-size:1.12rem;max-width:60ch;color:var(--muted)} .ctaRow{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px} .btn{border:0;border-radius:999px;padding:14px 18px;font-weight:800;cursor:pointer} .primary{background:var(--primary);color:#fff} .secondary{background:transparent;border:1px solid var(--border);color:var(--text)} .card{background:var(--surface);border:1px solid rgba(40,37,29,.08);border-radius:var(--r3);box-shadow:var(--shadow)} .heroCard{padding:22px} .statGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px} .stat{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r2);padding:16px} .stat .v{font-size:2rem;font-weight:900;font-variant-numeric:tabular-nums} .stat .l{color:var(--muted);font-size:.92rem} .sections{display:grid;gap:18px;margin:18px 0 26px} .panel{padding:22px} .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px} .mini{padding:18px;border-radius:var(--r2);background:var(--surface2);border:1px solid var(--border)} .mini h3{margin:0 0 8px;font-size:1rem} .mini p{margin:0;color:var(--muted)} .pricing{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px} .plan{padding:20px} .price{font-size:2rem;font-weight:900;margin:.2rem 0} .badge{display:inline-flex;align-items:center;gap:8px;padding:7px 10px;border-radius:999px;background:rgba(1,105,111,.1);color:var(--primary);font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em} .safe{color:var(--success)} .warn{color:var(--warn)} .footer{padding:18px 0 40px;color:var(--muted);font-size:.95rem} .logoMark{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round} .modalBackdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:flex-end;justify-content:center;padding:16px;z-index:50} .modalBackdrop.open{display:flex} .modal{width:min(100%,520px);background:var(--surface);border:1px solid var(--border);border-radius:24px;box-shadow:var(--shadow);padding:18px} .modalHead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px} .modalHead h2{margin:0;font-family:var(--display);font-size:2rem;line-height:1} .modalHead p{margin:6px 0 0;color:var(--muted)} .close{border:1px solid var(--border);background:var(--surface2);border-radius:999px;width:40px;height:40px;cursor:pointer;font-size:22px;line-height:1} .form{display:grid;gap:12px;margin-top:14px} .field{display:grid;gap:8px} label{font-weight:700;font-size:.92rem} input{width:100%;border:1px solid var(--border);background:var(--surface2);color:var(--text);border-radius:16px;padding:14px 16px;outline:none} input:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(1,105,111,.12)} .note{font-size:.86rem;color:var(--muted)} .formActions{display:flex;gap:10px;flex-wrap:wrap} .full{width:100%} .successMsg{display:none;margin-top:12px;padding:12px 14px;border-radius:16px;background:rgba(67,122,34,.12);color:var(--success);font-weight:700} .successMsg.show{display:block} @media (max-width:900px){ .hero,.grid3,.pricing{grid-template-columns:1fr} .statGrid{grid-template-columns:1fr 1fr} } @media (max-width:640px){ .wrap{padding:16px} .top{padding:8px 0 12px} .statGrid{grid-template-columns:1fr} h1{font-size:clamp(2.5rem,15vw,4.4rem)} .ctaRow{flex-direction:column} .btn{width:100%} .modalBackdrop{align-items:flex-end} }
+*{box-sizing:border-box} html{color-scheme:light dark} body{margin:0;font-family:var(--body);background:var(--bg);color:var(--text);line-height:1.5} a{color:inherit;text-decoration:none} button,input{font:inherit}.wrap{max-width:1180px;margin:0 auto;padding:20px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--primary2));display:grid;place-items:center;color:#fff;box-shadow:var(--shadow)}.toggle{border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:999px;padding:10px 14px;cursor:pointer}.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding:22px 0 12px}.eyebrow{color:var(--primary);font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.8rem}h1{font-family:var(--display);font-size:clamp(3rem,7vw,6.4rem);line-height:.92;margin:.35rem 0 1rem;letter-spacing:-.04em}.lede{font-size:1.12rem;max-width:60ch;color:var(--muted)}.ctaRow{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}.btn{border:0;border-radius:999px;padding:14px 18px;font-weight:800;cursor:pointer}.primary{background:var(--primary);color:#fff}.secondary{background:transparent;border:1px solid var(--border);color:var(--text)}.card{background:var(--surface);border:1px solid rgba(40,37,29,.08);border-radius:var(--r3);box-shadow:var(--shadow)}.heroCard{padding:22px}.statGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.stat{background:var(--surface2);border:1px solid var(--border);border-radius:var(--r2);padding:16px}.stat .v{font-size:2rem;font-weight:900;font-variant-numeric:tabular-nums}.stat .l{color:var(--muted);font-size:.92rem}.sections{display:grid;gap:18px;margin:18px 0 26px}.panel{padding:22px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.mini{padding:18px;border-radius:var(--r2);background:var(--surface2);border:1px solid var(--border)}.mini h3{margin:0 0 8px;font-size:1rem}.mini p{margin:0;color:var(--muted)}.pricing{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}.plan{padding:20px}.price{font-size:2rem;font-weight:900;margin:.2rem 0}.badge{display:inline-flex;align-items:center;gap:8px;padding:7px 10px;border-radius:999px;background:rgba(1,105,111,.1);color:var(--primary);font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.safe{color:var(--success)}.warn{color:var(--warn)}.footer{padding:18px 0 40px;color:var(--muted);font-size:.95rem}.logoMark{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}.modalBackdrop{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:flex-end;justify-content:center;padding:16px;z-index:50}.modalBackdrop.open{display:flex}.modal{width:min(100%,560px);background:var(--surface);border:1px solid var(--border);border-radius:24px;box-shadow:var(--shadow);padding:18px}.modalHead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px}.modalHead h2{margin:0;font-family:var(--display);font-size:2rem;line-height:1}.modalHead p{margin:6px 0 0;color:var(--muted)}.close{border:1px solid var(--border);background:var(--surface2);border-radius:999px;width:40px;height:40px;cursor:pointer;font-size:22px;line-height:1}.note{font-size:.86rem;color:var(--muted);margin-top:10px}.hubspotWrap{margin-top:16px;padding:8px;border-radius:18px;background:var(--surface2);border:1px solid var(--border)} .hubspotWrap .hs-form-frame{min-height:320px} @media (max-width:900px){.hero,.grid3,.pricing{grid-template-columns:1fr}.statGrid{grid-template-columns:1fr 1fr}} @media (max-width:640px){.wrap{padding:16px}.top{padding:8px 0 12px}.statGrid{grid-template-columns:1fr}h1{font-size:clamp(2.5rem,15vw,4.4rem)}.ctaRow{flex-direction:column}.btn{width:100%}.modalBackdrop{align-items:flex-end}}
 </style>
+<script src="https://js-eu1.hsforms.net/forms/embed/148205308.js" defer></script>
 </head>
 <body>
 <div class="wrap">
@@ -81,25 +82,10 @@
       </div>
       <button class="close" id="closeModal" type="button" aria-label="Schließen">×</button>
     </div>
-    <form class="form" id="leadForm">
-      <div class="field">
-        <label for="email">E-Mail-Adresse</label>
-        <input id="email" name="email" type="email" placeholder="max@example.com" required />
-      </div>
-      <div class="field">
-        <label for="name">Name <span class="note">optional</span></label>
-        <input id="name" name="name" type="text" placeholder="Max" />
-      </div>
-      <div class="field">
-        <label for="goal">Your goal <span class="note">optional</span></label>
-        <input id="goal" name="goal" type="text" placeholder="Mehr Cashflow in 30 Tagen" />
-      </div>
-      <div class="formActions">
-        <button class="btn primary full" type="submit">Get trial invite</button>
-      </div>
-      <div class="successMsg" id="successMsg">Saved. Your trial invite is ready.</div>
-      <div class="note">Hinweis: Diese Version speichert noch nicht in einer Datenbank. Als nächstes verbinden wir sie mit deinem echten Lead-System.</div>
-    </form>
+    <div class="hubspotWrap">
+      <div class="hs-form-frame" data-region="eu1" data-form-id="29f507e6-f386-4b22-8743-125a51a6a7dd" data-portal-id="148205308"></div>
+    </div>
+    <div class="note">Alle Einträge landen direkt in HubSpot. Zusätzlich kannst du in HubSpot Submission Notifications aktivieren.</div>
   </div>
 </div>
 
@@ -115,16 +101,16 @@ b.onclick = () => {
   b.textContent = d === 'dark' ? 'Light Mode' : 'Dark Mode';
 };
 const modal = document.getElementById('leadModal');
-const openModal = () => { modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); document.getElementById('email').focus(); };
+const openModal = () => { modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); };
 const closeModal = () => { modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); };
 document.getElementById('trialBtn').onclick = openModal;
 document.getElementById('demoBtn').onclick = () => window.location.href = 'https://app.cashflowos.app';
 document.getElementById('closeModal').onclick = closeModal;
 modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
-document.getElementById('leadForm').addEventListener('submit', e => {
-  e.preventDefault();
-  document.getElementById('successMsg').classList.add('show');
-  setTimeout(() => { window.location.href = 'mailto:hello@cashflowos.app?subject=Cashflow%20OS%20Trial%20Invite&body=New%20lead%3A%20' + encodeURIComponent(document.getElementById('email').value); }, 700);
-});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 </script>
-
+</body>
+</html>'''
+path = Path('output/cashflow-os/hubspot-landing-final.html')
+path.write_text(html, encoding='utf-8')
+print(path)
