@@ -127,10 +127,4 @@ document.getElementById('leadForm').addEventListener('submit', e => {
   setTimeout(() => { window.location.href = 'mailto:hello@cashflowos.app?subject=Cashflow%20OS%20Trial%20Invite&body=New%20lead%3A%20' + encodeURIComponent(document.getElementById('email').value); }, 700);
 });
 </script>
-</body>
-</html>'''
-(base / 'index.html').write_text(html, encoding='utf-8')
-(base / 'app-demo.html').write_text('<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Cashflow OS Demo</title></head><body><h1>Demo placeholder</h1></body></html>', encoding='utf-8')
-print('written', base / 'index.html')
-</body>
-</html>
+
